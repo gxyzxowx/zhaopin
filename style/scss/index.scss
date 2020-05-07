@@ -1,5 +1,116 @@
 @import 'init.scss';
 body{
-  height: 100px;
-  background-color: red;
+
+  .search{
+    margin: 0.1rem auto;
+    width: 6.9rem;
+    height: 0.64rem;
+    background:rgba(246,246,246,1);
+    border-radius:32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon{
+      width: 0.26rem;
+      height: 0.26rem;
+      background-image: url("../../image/search.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    input{
+      background:rgba(246,246,246,1);
+      border: none;
+      outline: none;
+      text-align: center;
+    }
+  }
+
+  .recruit-all{
+    margin: 0.1rem auto;
+    margin-top: 0.3rem;
+    width: 6.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:0.24rem;
+    font-family:"Source Han Sans CN";
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    .item{
+      text-align: center;
+      img{
+        display: inline-block;
+        width: 1.08rem;
+        height: 1.08rem;
+      }
+    }
+  }
+
+  .swiper-wrap{
+    width: 6.9rem;
+    height: 2.8rem;
+    margin: 0.35rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    .swiper-container{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #ffffff;
+    }
+  }
+
+  .modular{
+    width: 6.9rem;
+    margin: 0.35rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a{
+      display: block;
+      width: 3.3rem;
+      height: 1.94rem;
+      margin-bottom: 0.2rem;
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .tab{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.98rem;
+    background:rgba(255,255,255,0.5);
+    border-top:1px solid rgba(221, 221, 221, 1);
+    box-shadow:0px 3px 14px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .item{
+      text-align: center;
+      font-size:0.2rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      img{
+        display: inline-block;
+        width: 0.42rem;
+        height: 0.42rem;
+      }
+    }
+    .active{
+      color:rgba(68,141,251,1);
+    }
+  }
 }

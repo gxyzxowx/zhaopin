@@ -1,0 +1,32 @@
+section{
+  width: 92%;
+  margin-left: 4%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+flex-wrap: wrap;
+
+  div{
+    width: 48%;
+    height: 2.5rem;
+    background-image: url(/zhaopin/image/banner.png);
+    background-size: 100% 100%;
+    margin-top: 0.4rem;
+    position: relative;
+    p{
+      font-size:0.22rem;
+      text-align:left;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+      background:rgba(0, 0, 0, 0.2);
+      
+      width:calc(100% - 0.6rem);
+      
+    }
+  }
+}

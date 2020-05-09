@@ -1,0 +1,273 @@
+nav{
+  background:rgba(255,255,255,1);
+  font-size:0.36rem;
+  text-align: center;
+  padding: 0.3rem 0 0.3rem 0;
+  width: 95%;
+  margin-left: 2.5%;
+  overflow: hidden;
+  span{
+    font-size: 0.36rem;
+    font-family:Source Han Sans CN;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+   
+  }
+ a{
+   float: left;
+ }
+}
+
+.introduce-box1{
+  background:rgba(239,245,254,1);
+  border-radius:0.3rem;
+  width: 95%;
+  margin-left: 2.5%;
+  overflow: hidden;
+  padding: 0.3rem 0 0.3rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size:0.24rem;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  div{
+    margin-left: 0.2rem;
+  }
+  .introduce-box1-1{
+   width: 1.2rem;
+   height: 1.2rem;   
+   background-image: url(/zhaopin/image/banner.png);
+   background-size: 100% 100%;
+  }
+  .introduce-box1-2{
+    width: calc(100% - 1.8rem);
+     .introduce-box1-2-p1{
+      font-size:0.3rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+     width: 100%;
+      span:last-child{
+        font-size:0.22rem;
+        background:rgba(236,243,255,1);
+        border:1px solid rgba(107, 162, 253, 1);
+        border-radius:5px;
+        color:rgba(107, 162, 253, 1) ;
+        padding: 0.05rem 0.1rem 0.05rem 0.1rem;
+      }
+     }
+     .introduce-boxx2{
+      width: 100%;
+      display: flex;
+      justify-content:space-around;
+      flex-wrap: nowrap;
+      padding: 0;
+      margin: 0;
+      div{
+        width: 45%;
+        padding: 0;
+        margin: 0;
+        p{
+          font-size: 0.22rem;
+          text-align: left;
+          padding: 0;
+          line-height: 0.4rem;
+          padding-top: 0.1rem;
+          span{
+            text-align: left;
+            padding: 0;
+            
+          }
+        }
+      }
+      div:last-child{
+        width: 55%;
+      }
+    }
+
+
+  }
+}
+.box1{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  border-bottom: 0.1rem solid #F7F7F7;
+  .introduce-box1-p2{
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 0.32rem 0 0.32rem 0;
+   
+    font-size: 0;
+  
+    vertical-align: middle;
+    height: 0.26rem;
+    img{
+      width: 0.26rem;
+     
+    }
+    .box1-span1{
+      margin-left: 0.1rem;
+      font-size:0.26rem;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(102,102,102,1);
+      
+      }
+      span:last-child{
+        background:linear-gradient(135deg,rgba(116,192,243,1),rgba(70,175,245,1));
+        border-image:linear-gradient(0deg, rgba(72,179,233,1), rgba(36,153,241,1)) 1 1;
+        border-radius:0.2rem;
+        padding: 0.06rem 0.15rem 0.06rem 0.15rem ;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        font-size:0.24rem;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        float: right;
+      }
+
+
+  }
+}
+.box2{
+  width: 100%;
+  overflow: hidden;
+  padding: 0.3rem 0 0.3rem 0;
+  border-bottom: 1px solid #EEEEEEFF;
+  .box2-p1{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size:0.3rem;
+    font-family:Source Han Sans CN;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    border-left: 0.03rem solid #6BA2FDFF;
+    padding-left: 0.1rem;
+  }
+}
+.box3{
+  width: 100%;
+  overflow: hidden;
+  padding: 0.3rem 0 0.3rem 0;
+  border-bottom: 1px solid #EEEEEEFF;
+  
+  p{
+    width: 95%;
+    margin-left: 2.5%;
+    text-align: left;
+    letter-spacing: 0.005rem;
+   font-size:0.24rem;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:0.36rem;
+  span{
+    font-size:0.24rem;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(107,162,253,1);
+  }
+  }
+}
+.box4{
+  width: 100%;
+  overflow: hidden;
+  padding: 0.16rem 0 0.3rem 0;
+  border-bottom: 0.1rem solid #F7F7F7;
+  p{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size:0.26rem;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+   
+    span:first-child{
+      font-size:0.26rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+    }
+    span:last-child{
+      font-size:0.26rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(107,162,253,1);
+    }
+  }
+}
+.section{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #F7F7F7;
+  padding: 0.15rem 0 0.15rem 0;
+  .box5{
+    width: 95%;
+    margin-left: 2.5%;
+    overflow: hidden;
+    padding-bottom: 0.15rem;
+    .box5-1{
+      width: 70%;
+      overflow: hidden;
+      float: left;
+     p{
+       width: 100%;
+       line-height: 0.5rem;
+     }
+    .box5-1-p1{
+      font-size:0.3rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+    }
+    .box5-1-p2{
+      font-size:0.3rem;
+      font-family:Arial;
+      font-weight:400;
+      color:rgba(254,104,84,1)
+    }
+    .box5-1-p3{
+      font-size:0.24rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+      margin-top: 0.1rem;
+      span{
+        background-color: #F7F7F7FF;
+        padding: 0.1rem 0.15rem 0.1rem 0.15rem ;
+        margin-right: 0.12rem;
+      }
+    }
+    }
+    .box5-2{
+      width: 30%;
+      overflow: hidden;
+      float: left;
+      p{
+        font-size:0.28rem;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        background:linear-gradient(135deg,rgba(116,192,243,1),rgba(70,175,245,1));
+        border-image:linear-gradient(0deg, rgba(72,179,233,1), rgba(36,153,241,1)) 1 1;
+        border-radius:30px;
+        line-height: 0.28rem;
+        width: 1.2rem;
+        float: right;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        margin-top: 0.5rem;
+        padding: 0 0.1rem 0 0.1rem;
+        img{
+          width: 0.28rem;
+          margin-left: 0.2rem;
+          line-height: 0.6rem;
+        }
+      }
+    }
+  }
+}

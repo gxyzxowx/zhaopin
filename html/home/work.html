@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找工作</title>
+    <link rel="stylesheet" href="../../style/css/work.css">
+</head>
+<body>
+    <!-- 搜索 -->
+    <div class="search">
+        <div class="icon"></div>
+        <input type="text" placeholder="找全职 找兼职 搜索职位">
+    </div>
+
+    <div class="select-wrap">
+        <div class="select" id="select">
+            <div class="item" onclick="showBox(0)">
+                <div class="text">职位</div>
+                <img src="../../image/icon_join_top.png" alt="">
+            </div>
+            <div class="item" onclick="showBox(1)">
+                <div class="text">地区</div>
+                <img src="../../image/icon_join_bottom.png" alt="">
+            </div>
+            <div class="item" onclick="showBox(2)">
+                <div class="text">月薪</div>
+                <img src="../../image/icon_join_bottom.png" alt="">
+            </div>
+            <div class="item" onclick="showMore(3)">
+                <div class="text">更多</div>
+                <img class="sel" src="../../image/sel.png" alt="">
+            </div>
+        </div>
+
+        <!-- showBox -->
+        <div class="select-box" id="select-box">
+            <div class="box1" id="box1">
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限不限不限不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+            </div>
+            <div class="box2" id="box2">
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+            </div>
+        </div>
+        <!-- moreBox -->
+        <div class="select-box2" id="select-box2">
+            <div class="box2" id="box22">
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+            </div>
+            <div class="box1" id="box11">
+                <div class="box1-item" onclick="showBox22()">不限</div>
+                <div class="box1-item" onclick="showBox22()">不限</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="list">
+        <div class="item">
+            <div class="top">
+                <img src="" alt="">
+                <div class="text">
+                    <div class="money">
+                        <span>门店营业员</span>
+                        <span class="money-num"> <span>￥</span> 3500-4000/月</span>
+                    </div>
+                    <div class="address">
+                        <img src="../../image/company.png" alt="">
+                        <div class="address-text">服饰店</div>
+                        <div class="is_ok">已认证</div>
+                    </div>
+                    <div class="evaluate">
+                        <div class="evaluate-item">待遇好</div>
+                        <div class="evaluate-item">长白班</div>
+                        <div class="evaluate-item">加班补助</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="time">
+                    <span>最后更新</span><span>2020-04-29 14：26</span>
+                </div>
+                <div class="look">
+                    <span>33</span><span>人浏览</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="../../js/lib/rem.js"></script>
+<script src="../../js/lib/src/common.js"></script>
+</html>

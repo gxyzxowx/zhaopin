@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求职</title>
+    <link rel="stylesheet" href="../../style/css/personnel.css">
+</head>
+<body>
+    <!-- 搜索 -->
+    <div class="search">
+        <div class="icon"></div>
+        <input type="text" placeholder="找全职 找兼职 搜索职位">
+    </div>
+
+    <div class="select-wrap">
+        <div class="select" id="select">
+            <div class="item" onclick="showBox(0)">
+                <div class="text">职位</div>
+                <img src="../../image/icon_join_top.png" alt="">
+            </div>
+            <div class="item" onclick="showBox(1)">
+                <div class="text">地区</div>
+                <img src="../../image/icon_join_bottom.png" alt="">
+            </div>
+            <div class="item" onclick="showBox(2)">
+                <div class="text">月薪</div>
+                <img src="../../image/icon_join_bottom.png" alt="">
+            </div>
+            <div class="item" onclick="showMore(3)">
+                <div class="text">更多</div>
+                <img class="sel" src="../../image/sel.png" alt="">
+            </div>
+        </div>
+
+        <!-- showBox -->
+        <div class="select-box" id="select-box">
+            <div class="box1" id="box1">
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限不限不限不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+                <div class="box1-item" onclick="showBox2()">不限</div>
+            </div>
+            <div class="box2" id="box2">
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+            </div>
+        </div>
+        <!-- moreBox -->
+        <div class="select-box2" id="select-box2">
+            <div class="box2" id="box22">
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限不限不限不限</div>
+                <div class="box2-item">不限</div>
+                <div class="box2-item">不限</div>
+            </div>
+            <div class="box1" id="box11">
+                <div class="box1-item" onclick="showBox22()">不限</div>
+                <div class="box1-item" onclick="showBox22()">不限</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="list">
+        <div class="item">
+            <div class="top">
+                <div class="img">
+                    <img src="" alt="" class="user-img">
+                    <div class="gender">
+                        <img src="../../image/male.png" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="name">
+                        <span>王可可</span>
+                        <span class="name-text">33岁</span>
+                        <span class="name-text">1年</span>
+                        <span class="name-text">大学</span>
+                    </div>
+                    <div class="position">
+                        <span>期望职位:</span>
+                        <span>营业员</span>
+                        <span>店员</span>
+                    </div>
+                    <div class="money">
+                        <span class="left">
+                            <span>期望月薪:</span>
+                            <span class="num">￥</span>
+                            <span class="num">3500~4500/月</span>
+                        </span>
+                        <span class="right">10分钟前</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>沟通能力强</span>
+                <span>沟通能力强</span>            
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="../../js/lib/rem.js"></script>
+<script src="../../js/lib/src/home/shop_recruit.js"></script>
+</html>

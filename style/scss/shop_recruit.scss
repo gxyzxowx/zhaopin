@@ -1,4 +1,5 @@
 @import 'init.scss';
+@import 'common.scss';
 body{
     padding-bottom: 0.98rem;
 
@@ -30,122 +31,7 @@ body{
         text-align: left;
       }
     }
-    .select-wrap{
-        position: relative;
-        .select{
-            height: 0.76rem;
-            display: flex;
-            justify-content: space-around;
-            border-bottom: 1px solid #eee;
-            .item{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size:0.26rem;
-                font-family:"Source Han Sans CN";
-                font-weight:400;
-                color:rgba(102,102,102,1);
-                img{
-                    margin-left: 0.1rem;
-                    width: 0.12rem;
-                    height: 0.12rem;
-                }
-                .sel{
-                    width: 0.26rem;
-                    height: 0.26rem;
-                }
-            }  
-        }
-        .select-box{
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 0.76rem;
-            width: 100%;
-            display: flex;
-            .box1{
-                display: none;
-                background-color: #fff;
-                width: 2.6rem;
-                .box1-item{
-                    height: 0.88rem;
-                    line-height: 0.88rem;
-                    width: 100%;
-                    text-align: center;
-                    font-size:0.26rem;
-                    font-family:"Source Han Sans CN";
-                    font-weight:400;
-                    color:rgba(51,51,51,1);
-                }
-
-            }
-            .box2{
-                display: none;
-                background:rgba(245,245,245,1);
-                overflow: scroll;
-                .box2-item{
-                    padding: 0 0.3rem;
-                    box-sizing: border-box;
-                    height: 0.88rem;
-                    line-height: 0.88rem;
-                    width: 100%;
-                    text-align: center;
-                    font-size:0.26rem;
-                    font-family:"Source Han Sans CN";
-                    font-weight:400;
-                    color:rgba(51,51,51,1);
-                }
-
-            }   
-            
-        }
-        .select-box2{
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 0.76rem;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            .box1{
-                display: none;
-                background-color: #fff;
-                width: 2.6rem;
-                .box1-item{
-                    height: 0.88rem;
-                    line-height: 0.88rem;
-                    width: 100%;
-                    text-align: center;
-                    font-size:0.26rem;
-                    font-family:"Source Han Sans CN";
-                    font-weight:400;
-                    color:rgba(51,51,51,1);
-                }
-
-            }
-            .box2{
-                display: none;
-                background:rgba(245,245,245,1);
-                overflow: scroll;
-                .box2-item{
-                    padding: 0 0.3rem;
-                    box-sizing: border-box;
-                    height: 0.88rem;
-                    line-height: 0.88rem;
-                    width: 100%;
-                    text-align: center;
-                    font-size:0.26rem;
-                    font-family:"Source Han Sans CN";
-                    font-weight:400;
-                    color:rgba(51,51,51,1);
-                }
-
-            }   
-            
-        }
- 
-    }
-
+   
 
     .list{
         .item{

@@ -1,13 +1,49 @@
+<!--
+ * @Description  : 添加简历
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>添加简历</title>
-    <link rel="stylesheet" href="../../style/css/fill_in.css">
+    <link rel="stylesheet" href="../../style/css/resume.css">
 </head>
 <body>
-    
+    <form action="">
+        <div class="name">
+            <div class="text">
+                <div class="">真实姓名<span>*</span></div>
+            </div>
+            <input type="text" value="" placeholder="请输入真实姓名">
+        </div>
+
+        <div class="gender">
+            <div class="text">
+                <div class="">真实性别<span>*</span></div>
+            </div>
+            <div class="gender-wrap">
+                <div class="nan">                 
+                    <input name="Fruit" id="nan" type="radio" class="ipt-gender"/>
+                    <label for="nan">男</label>
+                    
+                </div>
+                <div class="nv">                   
+                    <input name="Fruit" id="nv" type="radio" class="ipt-gender"/>
+                    <label for="nv">女</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="year">
+            <div class="text">
+                <div class="">出生年份<span>*</span></div>
+            </div>
+            <input type="text" value="" placeholder="请选择出生年份">
+            <img src="../../image/right.png" alt="">
+        </div>
+
+    </form>
 </body>
 <script src="../../js/lib/rem.js"></script>
 </html>

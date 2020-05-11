@@ -4,7 +4,6 @@ body{
     input, textarea{
         outline: none;
         font-size: 0.3rem;
-        padding-left: 0.05rem;
     }
     .logo-wrap, .license{
         border-bottom: 1px solid #eeeeee;
@@ -160,6 +159,10 @@ body{
         }
         input{
             flex: 1;
+            font-size:0.3rem;
+            font-family:"Source Han Sans CN";
+            font-weight:400;
+            color:rgba(153,153,153,1);  
         }
         img{
             display: block;

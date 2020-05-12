@@ -1,0 +1,404 @@
+.box1{
+  width: 100%;
+  overflow: hidden;
+  padding: 0.29rem 0 0 0;
+  margin-top: 0.32rem;
+  float: left;
+  border-bottom: 0.07rem solid #EEEEEE;
+  border-top: 1px solid #EEEEEE;
+    div{
+      width: 95%;
+      margin-left: 2.5%;
+     overflow: hidden;
+      .box1-1{
+        float: left;
+        width:1.26rem;
+        height:1.26rem;
+        background:rgba(255,255,255,1);
+        border:1px solid rgba(238, 238, 238, 1);
+        box-shadow:0px 5px 6px 0px rgba(75,75,75,0.16);
+        border-radius:50%;
+        background-image: url(../../image/user1.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: 0.2rem;
+        position: relative;
+        overflow: visible;
+        img{
+          position: absolute;
+          width: 0.26rem;
+          right: 0.1rem;
+          bottom: 0;
+          z-index: 1;
+          vertical-align: middle;
+        }
+      }
+      .box1-2{
+        float: left;
+        width: calc(100% - 1.8rem);
+         font-size: 0;
+         p{
+           margin-bottom: 0.1rem;
+         }
+        .box1-2-p1{
+          
+          span:first-child{
+            font-size:0.3rem;
+            font-family:Source Han Sans CN;
+            font-weight:500;
+            color:rgba(68,68,68,1);
+          }
+          
+          span:last-child{
+            float: right;
+            font-size:0.22rem;
+            font-family:Source Han Sans CN;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+          }
+        }   
+        .box1-2-p2{
+          font-size:0.26rem;
+            font-family:Source Han Sans CN;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+           
+        }
+
+        .box1-2-p3{
+        overflow: hidden;
+        height: 0.6rem;
+        line-height: 0.6rem;
+          span:first-child{
+            font-size:0.24rem;
+            font-family:Source Han Sans CN;
+            font-weight:400;
+            color:rgba(255,255,255,1);
+            background:linear-gradient(135deg,rgba(116,192,243,1),rgba(70,175,245,1));
+            border-radius:20px;
+            padding: 0.08rem 0.16rem 0.08rem 0.16rem;
+            line-height: 0.25rem;
+          }
+          img{
+            width: 0.28rem;
+            margin-left: 0.22rem;
+            margin-top: -0.2rem;
+            vertical-align: middle;
+          }
+          span:last-child{
+            margin-left: 0.1rem;
+            font-size:0.24rem;
+            font-family:Source Han Sans CN;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+          }
+        }
+
+      }
+    }
+    .boxp{
+      width: 95%;
+      margin-left: 2.5%;
+      padding: 0.25rem 0 0.25rem 0;
+      border-top: 1px solid #EEEEEE;
+      font-size: 0;
+      margin-top: 0.15rem;
+      span{
+        font-size:0.24rem;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(110,167,254,1);
+        background:rgba(243,247,255,1);
+        border-radius:0.2rem;
+        padding: 0.08rem 0.15rem 0.08rem 0.15rem;
+        margin-right: 0.2rem;
+      }
+    }
+}
+
+.box2{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 0.07rem solid #EEEEEE;
+  padding-bottom: 0.25rem;
+  h2{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size:0.3rem;
+    font-family:Source Han Sans CN;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    margin-top: 0.25rem;
+    border-left: 0.04rem solid rgba(107, 162, 253, 1);
+    padding-left: 0.1rem;    
+  }
+  p{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size:0.26rem;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    margin-top: 0.25rem;
+    span{
+      font-size:0.26rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+    }
+  }
+}
+
+.box3{
+  width: 100%;
+  overflow: hidden;
+  padding: 0.25rem 0 0.25rem 0;
+  border-bottom: 0.07rem solid #EEEEEE;
+  .box3-h2{
+     width: 95%;
+     margin-left: 2.5%;
+     font-size:0.3rem;
+      font-family:Source Han Sans CN;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      border-left: 0.04rem solid rgba(107, 162, 253, 1);
+      padding-left: 0.1rem;  
+     margin-bottom: 0.24rem;
+   }
+   .box3-box1{
+     width: 95%;
+     margin-left: 2.5%;
+     background:rgba(255,255,255,1);
+     padding: 0.23rem 0 0.1rem 0;
+     background:rgba(249,249,249,1);
+     padding-left: 0.23rem;
+     box-sizing: border-box;
+     
+     h3{
+      font-size:0.26rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      margin-bottom: 0.15rem;
+      
+     }
+     p{
+      font-size:0.22rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+      margin-bottom: 0.15rem;
+     }
+   }
+   .box3-box1{
+     width: 95%;
+     margin-left: 2.5%;
+     background:rgba(255,255,255,1);
+     padding: 0.23rem 0 0.1rem 0;
+     background:rgba(249,249,249,1);
+     padding-left: 0.23rem;
+     box-sizing: border-box;
+     margin-top: 0.1rem;
+     h3{
+      font-size:0.26rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      margin-bottom: 0.15rem;
+     
+      
+     }
+     p{
+      font-size:0.22rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+      margin-bottom: 0.15rem;
+     }
+   }
+}
+.box4{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 0.07rem solid #EEEEEE;
+  padding-bottom: 0.34rem;
+   h2{
+    padding-left: 0.1rem; 
+    border-left: 0.04rem solid rgba(107, 162, 253, 1);
+     width: 95%;
+     margin-left: 2.5%;
+     font-size:0.3rem;
+      font-family:Source Han Sans CN;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      margin-top: 0.25rem;
+   }
+   p{
+    border:1px dashed rgba(153,153,153,1);
+    border-radius:10px;
+    font-size:0.24rem;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    width: 95%;
+     margin-left: 2.5%;
+     padding: 0.25rem 0.20rem 0.25rem 0.25rem;
+     box-sizing: border-box;
+     margin-top: 0.24rem;
+   }
+}
+.box6{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.3rem;
+   h2{
+    width: 95%;
+    margin-left: 2.5%;
+    padding-left: 0.1rem;
+    font-size:0.3rem;
+    font-family:Source Han Sans CN;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    border-left: 0.04rem solid rgba(107, 162, 253, 1);
+    margin: 0.25rem 0 0.25rem 2.5%;
+   }
+   .box6-1{
+    width: 95%;
+    margin-left: 2.5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    div{
+      width: 23%;
+      height: 1.6rem;
+      background:rgba(238,238,238,1);
+      font-size:0.24rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(153,153,153,1); 
+      margin-bottom: 0.12rem; 
+      text-align: center;
+      line-height: 1.6rem;    
+    }
+   }
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  background:rgba(255,255,255,1);
+  box-shadow:0px -5px 8px 0px rgba(0, 0, 0, 0.06);
+  justify-content: space-around;
+  margin-top: 0.4rem;
+.footerbox2{
+    height: 1rem;
+    width: 30%;
+    font-size: 0;
+    text-align: center;
+    background:rgba(255,255,255,1);
+  box-shadow:0px -5px 8px 0px rgba(0, 0, 0, 0.06);
+   
+    img{
+      margin-top: 0.15rem;
+      width: 0.4rem;
+      vertical-align: middle;
+    }
+    span{
+      font-size:0.24rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+    }
+  }
+  .footerbox1{
+    border-right: 0.0005rem solid #D5D5D5;
+  }
+  .footerbox2{
+   img{
+    width: 0.35rem;
+   }
+  }
+  .footerbox3{
+    width: 70%;
+    background:linear-gradient(135deg,rgba(116,192,243,1),rgba(70,175,245,1));
+    font-size:0.28rem;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    text-align: center;
+    color:rgba(255,255,255,1);
+    padding-top: 0.3rem;
+    img{
+      width: 0.28rem;
+    }
+  }
+}
+.time{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  div{
+    height: 4rem;
+    width: 80%;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 8px 0px rgba(1,77,4,0.16);
+    border-radius:0.3rem;
+    position: absolute;
+    left:10% ;
+    top: calc(50% - 2rem);
+    h2{
+      text-align: center;
+      padding: 0.33rem 0 0.33rem 0;
+      font-size:0.3rem;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(0,0,0,1);
+    }
+    p{
+      
+      font-size:0.26rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(0,0,0,1);
+      padding: 0.35rem 0 0.35rem 0;
+      border-top: 1px solid #EEEEEE;
+      border-bottom: 1px solid #EEEEEE;
+      span{
+        margin-left: 0.29rem;
+      }
+    }
+    h4{
+       text-align: center;
+      span{
+        width: 35%;
+        font-size:0.28rem;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        display: inline-block;
+        height: 0.89rem;
+        text-align: center;
+        line-height: 0.89rem;
+      }
+      span:first-child{
+        background:linear-gradient(90deg,rgba(116,192,243,1),rgba(70,175,245,1));
+        border-radius:45px;
+
+      }
+      span:last-child{
+        background:linear-gradient(90deg,rgba(191,191,191,1),rgba(210,212,212,1));
+        border-radius:45px;
+      }
+    }
+  }
+}

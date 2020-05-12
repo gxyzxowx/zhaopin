@@ -1,7 +1,7 @@
 /*
  * @Date         : 2020-03-11 11:55:40
  * @LastEditors  : 曾迪
- * @LastEditTime : 2020-05-07 15:19:39
+ * @LastEditTime : 2020-05-12 14:54:31
  * @FilePath     : \07wx_zhaopin\gulpfile.js
  */
 // require('babel-polyfill');     //es6新API
@@ -43,8 +43,8 @@ function concat(cb) {
 // 对scss/less编译，压缩，输出css文件
 function css(cb) {
   src('./style/scss/*.scss')
-    // .pipe(plugins.sass({ outputStyle: 'expanded ' }))
-    .pipe(plugins.sass({outputStyle: 'compressed'}))
+    .pipe(plugins.sass({ outputStyle: 'expanded ' }))
+    // .pipe(plugins.sass({outputStyle: 'compressed'}))
     .pipe(plugins.autoprefixer({
       cascade: false, //是否美化属性值 默认：true 像这样：
       //-webkit-transform: rotate(45deg);

@@ -73,7 +73,16 @@ for(let i = 0; i<box2_item.length;i++){
         for(let j = 0;j<box2_item.length;j++){
             box2_item[j].style.color = "#666666";   
         }
-        box2_item[i].style.color = "#448DFB";              
+        box2_item[i].style.color = "#448DFB";    
+        
+        box1.style.display = ""; 
+        box2.style.display = "";
+        more1.style.display = "";
+        index = null;
+        for(let j = 0;j<select_img.length-1;j++){
+            select_img[j].src = "../../image/icon_join_bottom.png";
+            select_text[j].style.color = "#666666";
+        }  
     }
 }
 
@@ -125,7 +134,10 @@ for(let i = 0; i<more2_item.length;i++){
         for(let j = 0;j<more2_item.length;j++){
             more2_item[j].style.color = "#666666";   
         }
-        more2_item[i].style.color = "#448DFB";              
+        more2_item[i].style.color = "#448DFB";
+        more1.style.display = "";
+        more2.style.display = "";
+        select_text[3].style.color = "#666666"; 
     }
 }
 

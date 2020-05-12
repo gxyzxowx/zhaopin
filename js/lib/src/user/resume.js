@@ -111,6 +111,12 @@ $(function() {
 
     //bind the click event for 'input' element
     $("#myAddrs").click(function() {
+        var mo=function(e){e.preventDefault();};
+        function stop(){
+                document.body.style.overflow='hidden';       
+                document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+        };
+        stop();
         var PROVINCES = [],
             startCities = [],
             startDists = [];

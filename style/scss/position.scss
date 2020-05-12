@@ -238,7 +238,7 @@ section{
   margin-left: 2.5%;
   overflow: hidden;
   padding: 0.3rem 0 0.3rem 0;
-  margin-top: 0.3rem;
+
   display: flex;
   flex-wrap: nowrap;
   div{
@@ -246,7 +246,7 @@ section{
   }
   .introduce-box1-1{
    float: left;
-   background-image: url(/zhaopin/image/banner.png);
+   background-image: url(../../image/banner.png);
    background-size: 100% 100%;
    width: 1.2rem;
    height: 1.2rem;

@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" href="../../css/mycss/user_forget.css">
+    <style>
+        @import "../../fontwr/iconfont.css";
+        html {
+            font-family: sans-serif, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        html,
+        body,
+        header,
+        section,
+        footer,
+        div,
+        ul,
+        ol,
+        li,
+        img,
+        a,
+        span,
+        em,
+        del,
+        legend,
+        center,
+        strong,
+        var,
+        fieldset,
+        form,
+        label,
+        dl,
+        dt,
+        dd,
+        cite,
+        input,
+        hr,
+        time,
+        mark,
+        code,
+        figcaption,
+        figure,
+        textarea,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-style: normal;
+        }
+        body {
+            line-height: 1.5;
+            font-size: 0.8rem;
+            color: #212121;
+            outline: 0;
+        }
+        @media only screen and (min-width: 400px) {
+            html {
+                font-size: 21.33333333px !important;
+            }
+        }
+        @media only screen and (min-width: 414px) {
+            html {
+                font-size: 21px !important;
+            }
+        }
+        @media only screen and (min-width: 480px) {
+            html {
+                font-size: 25.6px !important;
+            }
+        }
+        ul,
+        li {
+            list-style: none;
+        }
+        a {
+            color: #0062cc;
+            text-decoration: none;
+            background-color: transparent;
+        }
+        textarea {
+            overflow: hidden;
+            resize: none;
+        }
+        body,
+        html {
+            background-color: #fff;
+        }
+        /*header {*/
+            /*position: fixed;*/
+            /*top: 0;*/
+            /*z-index: 5;*/
+            /*width: 100%;*/
+            /*text-align: center;*/
+            /*font-size: 1rem;*/
+            /*background-color: #E5502E;*/
+            /*height: 2.5rem;*/
+            /*color: #fff;*/
+            /*line-height: 2.5rem;*/
+            /*margin: 0;*/
+        /*}*/
+        /*header .headbox {*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*width: 100%;*/
+            /*height: 2.5rem;*/
+        /*}*/
+        /*header .headbox .icon-left {*/
+            /*position: absolute;*/
+            /*width: 2.5rem;*/
+            /*height: 100%;*/
+            /*top: 0;*/
+            /*left: 0;*/
+            /*line-height: 2.5rem;*/
+            /*font-size: 1.2rem;*/
+        /*}*/
+        /*header .headbox .text {*/
+            /*letter-spacing: .1rem;*/
+            /*font-size: 1rem;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <!--<header>-->
+        <!--<div class="headbox">-->
+            <!--<i class="iconfont icon-left"  tapmode onclick="WR.fnCloseWin()" ></i>-->
+            <!--<span class="text">系统注册</span>-->
+        <!--</div>-->
+    <!--</header> -->
+  <div class="main">
+        <div class="inputbox">
+            <div class="phonenum cel">
+                <div class="iconfont icon-phone1"></div>
+                <input type="text" placeholder="请输入手机" id="username">
+            </div>
+            <div class="vcode cel" >
+                <div class="iconfont icon-msnui-auth-code"></div>
+                <input type="text" placeholder="请输入验证码" id="yanzhengma">
+                <div class="getcode" id="getyanzhengmaid">获取验证码</div>
+            </div>
+            <div class="password cel">
+                <div class="iconfont icon-mima"></div>
+                <input type="password" placeholder="设置密码（6-20位字母或数字）" id="password">
+            </div>
+        </div>
+        <div class="btnbox">注册</div>
+    </div>
+</body>
+<script type="text/javascript" src="../../script/common.js"></script>
+
+<script type="text/javascript">
+var indexSetting=$api.getStorage("indexSetting");
+  if(!indexSetting)
+  {
+    var indexSetting = {
+        url: "http://xg.tyt8.cn/Api",
+        host:"http://xg.tyt8.cn",
+    };
+  }
+window.onload=function(){
+
+        indexSetting.timeva = 59;
+        var dtimer = null;
+
+    apiready = function() {
+
+//   $api.dom('header').style.paddingTop = api.safeArea.top + 'px';
+// $api.dom('.main').style.marginTop = $api.dom('header').offsetHeight+ 'px';
+    $api.byId('getyanzhengmaid').addEventListener('touchstart',getyanzhengma);
+    function getyanzhengma() {
+      console.log("获取验证码发短信");
+      //按过一次就按不起了
+      if ($api.hasCls($api.byId('getyanzhengmaid'), 'gray')) {
+          return;
+      }
+      var phone = parseInt($api.val($api.byId('username')));
+      console.log(phone);
+      if (!/^\d{11}$/.test(phone)) {
+          api.toast({
+              msg: '手机号不能为空或格式不正确',
+              duration: 2000,
+              location: 'bottom'
+          });
+          $api.dom('.phonenum').style.animation = 'danceinput 3 .1s';
+          var t=setTimeout("$api.dom('.phonenum').style.animation = 'none'",300);
+          return false;
+      }
+      api.toast({
+          msg: '短信发送中',
+          duration: 2000,
+          location: 'bottom'
+      });
+      daojishi();
+      postAjax({
+         ajaxUrl: '/User/getcode',
+         ajaxDataValues:{
+             phone:phone
+         },
+         callback:function(ret){
+           if (ret.status) {
+             // indexSetting.code=ret.code;
+             $api.addCls($api.byId('getyanzhengmaid'), 'gray');
+             api.toast({
+               msg: '短信发送成功',
+               duration: 2000,
+               location: 'bottom'
+           });
+           } else {
+              //  api.toast({
+              //      msg: err.msg,
+              //      duration: 2000,
+              //      location: 'bottom'
+              //  });
+              //  return false;
+           }},
+         callbackErr:function(err){},
+         method:'post'
+      })
+  }
+  function daojishi() {
+    clearTimeout(dtimer);
+      if (indexSetting.timeva > 1) {
+          indexSetting.timeva--;
+          $api.text($api.byId('getyanzhengmaid'), indexSetting.timeva + '秒后重发');
+          dtimer = setTimeout(function() {
+              daojishi();
+          }, 1000);
+      } else {
+          indexSetting.timeva = 59;
+          $api.removeCls($api.byId('getyanzhengmaid'), 'gray');
+          $api.text($api.byId('getyanzhengmaid'), '获取验证码');
+      }
+  }
+  $api.dom('.btnbox').addEventListener('touchstart',resetpassword);
+    function resetpassword() {
+        console.log("登陆")
+        var username = $api.trim(document.getElementById('username').value);
+        var password = $api.trim(document.getElementById('password').value);
+        // var password1 = $api.trim(document.getElementById('password1').value);
+        var yanzhengma=$api.trim(document.getElementById("yanzhengma").value);
+        if (!username || !password) {
+            api.toast({
+                msg:!username?"必须填写用户名":'必须输入密码',
+                duration: 2000,
+                location: 'bottom'
+            });
+            api.toast({
+                msg: '手机号不能为空',
+                duration: 2000,
+                location: 'bottom'
+            });
+            $api.dom('.phonenum').style.animation = 'danceinput 3 .1s';
+            var t=setTimeout("$api.dom('.phonenum').style.animation = 'none'",300);
+    //     toast.fail({
+    //       title: !username?"必须填写用户名":'必须输入密码',
+    //       duration: 2000
+    //   });
+      return false;
+      }
+         if(!yanzhengma)
+         {
+            api.toast({
+                msg:'验证码不能为空！',
+                duration: 2000,
+                location: 'bottom'
+            });
+           return false;
+         }
+            //
+            sendPostRegister(username, password,yanzhengma, function(ret) {
+                if (ret.code > 0) {
+                    WR.fnOpenWin("login");
+                } else {
+                    api.alert({
+                        title: '失败',
+                        msg: ret['info']
+                    });
+                }
+            });
+    }
+    /** 发送注册命令*/
+    function sendPostRegister(username, password,yanzhengma, callback) {
+      console.log(yanzhengma);
+        postAjax({
+           ajaxUrl: '/User/registerApi',
+           ajaxDataValues:{
+             username: username,
+             password: password,
+             // 从用户输入的值
+             code:yanzhengma
+           },
+           callback:function(ret){
+             callback(ret);
+             console.log(JSON.stringify(ret));
+           },
+           callbackErr:function(err){
+             callback({
+                 uid: 0,
+                 info: err['msg'] + '（请联系管理员）'
+             });
+           },
+           method:'post'
+        })
+    }
+};
+}
+</script>
+</html>

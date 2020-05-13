@@ -2,7 +2,6 @@ nav{
   height: 3.1rem;
   width: 100%;
   background-image: url(../../image/top-bg.png);
-  margin-top: 0.32rem;
   overflow: hidden;
   display: flex;
   div{
@@ -141,7 +140,7 @@ section{
   background-color: rgba(0,0,0,0.5);
   overflow: hidden;
   div{
-    height: 5.04rem;
+  overflow: hidden;
     width: 80%;
     background:rgba(255,255,255,1);
     box-shadow:0px 0px 8px 0px rgba(1,77,4,0.16);
@@ -150,52 +149,19 @@ section{
     left:10% ;
     top: calc(50% - 2rem);
     h2{
+      padding: 0.4rem 0 0.4rem 0;
       text-align: center;
-      padding: 0.33rem 0 0.33rem 0;
-      font-size:0.3rem;
-        font-family:Source Han Sans CN;
-        font-weight:400;
-        color:rgba(0,0,0,1);
-        border-bottom: 1px #eeeeee solid;
+      font-size:0.28rem;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+      border-bottom: 1px #E6E6E6 solid;
     }
-    p{
-      font-size: 0;
-     box-sizing: border-box;
-      padding: 0.35rem 0 0.35rem 0;
-      padding-left: 0.3rem;
-      overflow: hidden;
-      border-bottom: 1px #eeeeee solid;
-      width: 100%;
-      
-      .inp{
-       
-        width: 0.3rem;
-        height: 0.3rem;
-        background:rgba(255,255,255,1);
-        box-shadow:0px 0px 8px 0px rgba(1,77,4,0.16);
-        border-radius:30px;
-        display: inline-block;
-        border: 1px #ccc solid;
-        box-sizing: border-box;
-        
-        background-size: 100% 100%;
-      }
-      .add{
-        background-image: url(../../image/female11.png);
-      }
-      span:last-child{
-        padding-left: 0.1rem;
-        font-size:0.3rem;
-        font-family:Source Han Sans CN;
-        font-weight:400;
-        color:rgba(102,102,102,1);
-        margin-left: 0.005;
-      }
-    }
+  
     h4{
        text-align: center;
        font-size: 0;
-       margin-top: 0.4rem;
+       padding: 0.6rem 0 0.6rem 0;
        justify-content: space-around;
        display: flex;
       span{

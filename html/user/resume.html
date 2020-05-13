@@ -42,7 +42,7 @@
             <div class="text">
                 <div class="">出生年份<span>*</span></div>
             </div>
-            <input type="text" value="" placeholder="请选择出生年份" id="birthday" onclick="showSelect()">
+            <input type="text" value="" readonly placeholder="请选择出生年份" id="birthday" onclick="showSelect()">
             <img src="../../image/right.png" alt="">
         </div>
         <div class="education ipt-common">
@@ -78,7 +78,7 @@
                 <div class="">期望区域<span>*</span></div>
             </div>
             <!-- <input type="text" value="" placeholder="请选择期望区域"> -->
-            <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="4-84-1298" value="山西省 太原市 万柏林区" />
+            <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="1-36-37" value="北京 北京市 东城区" />
             <img src="../../image/right.png" alt="">
         </div>
 
@@ -375,6 +375,7 @@
         scroll_select_one.style.opacity = 1;
         main.style.bottom = 0;
         // stop()
+        document.body.style.overflow='hidden';
     }
     // 点击取消选择框
     function cancelSelect(){
@@ -382,6 +383,7 @@
         scroll_select_one.style.zIndex = -6;
         scroll_select_one.style.opacity = 0;
         main.style.bottom = -4.76+"rem";
+        document.body.style.overflow='';
     }
     
     // 点击确认选择框
@@ -391,6 +393,7 @@
         scroll_select_one.style.opacity = 0;
         main.style.bottom = -4.76+"rem";
         birthday.value = boxText;
+        document.body.style.overflow='';
     }
 
     // 设置选中item的样式
@@ -424,18 +427,6 @@
             }, 500)
         }, 300);
     });
-
-
-
-    var mo=function(e){e.preventDefault();};
-    function stop(){
-            document.body.style.overflow='hidden';       
-            document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
-    }
-    function move(){
-            document.body.style.overflow='';//出现滚动条
-            document.removeEventListener("touchmove",mo,{passive:false});       
-    }
 
 </script>
 </html>

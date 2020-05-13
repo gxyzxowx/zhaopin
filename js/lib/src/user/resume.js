@@ -75,7 +75,7 @@ $(function() {
 
     //bind the click event for 'input' element
     $("#myAddrs").click(function() {
-        console.log(111111111)
+        document.body.style.overflow='hidden';
         var PROVINCES = [],
             startCities = [],
             startDists = [];

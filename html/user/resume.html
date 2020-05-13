@@ -11,9 +11,6 @@
     <!-- 插件 -->
     <!-- <link rel="stylesheet" href="../../style/plugins-css/layout.min.css"> -->
     <link rel="stylesheet" href="../../style/plugins-css/scs.min.css">
-    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> -->
 </head>
 <body>
     <form action="">
@@ -45,7 +42,7 @@
             <div class="text">
                 <div class="">出生年份<span>*</span></div>
             </div>
-            <input type="text" value="" placeholder="请选择出生年份">
+            <input type="text" value="" readonly placeholder="请选择出生年份" id="birthday" onclick="showSelect()">
             <img src="../../image/right.png" alt="">
         </div>
         <div class="education ipt-common">
@@ -81,7 +78,7 @@
                 <div class="">期望区域<span>*</span></div>
             </div>
             <!-- <input type="text" value="" placeholder="请选择期望区域"> -->
-            <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="4-84-1298" value="山西省 太原市 万柏林区" />
+            <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="1-36-37" value="北京 北京市 东城区" />
             <img src="../../image/right.png" alt="">
         </div>
 
@@ -239,11 +236,11 @@
         </div>
 
         <!--底部选择框三级 -->
-        <div class="select" id="select">
+        <!-- <div class="select" id="select">
             <div class="main">
                 <div class="top">
-                    <div class="cancel">取消</div>
-                    <div class="confirm">确认</div>
+                    <div class="cancel" onclick="cancelSelect()">取消</div>
+                    <div class="confirm" onclick="confirmSelect()">确认</div>
                 </div>
                 <div class="scroll-wrap">
                     <div class="change"></div>
@@ -314,17 +311,122 @@
                     </div>
                 </div>            
             </div>
-        </div>
-
-
-        <!-- 底部选择框一级 -->
+        </div> -->
 
     </form>
+    <!-- 底部选择框一级 -->
+    <div class="scroll_select_one" id="scroll_select_one">
+        <div class="scroll_select_one_mask" onclick="cancelSelect()"></div>
+        <div class="main">
+            <div class="top_btn">
+                <div class="left cancel" id="cancel" onclick="cancelSelect()">取消</div>
+                <div class="center">出生年份</div>
+                <div class="right confirm" id="confirm" onclick="confirmSelect()">确定</div>
+            </div>
+            <div class="scroll-wrap">
+                <div class="change"></div>
+                <div class="scroll" id="scroll">
+                                <div class="scroll-item">2001年</div>
+                                <div class="scroll-item">2002年</div>
+                                <div class="scroll-item">2003年</div>
+                                <div class="scroll-item">2004年</div>
+                                <div class="scroll-item">2005年</div>
+                                <div class="scroll-item">2006年</div>
+                                <div class="scroll-item">2007年</div>
+                                <div class="scroll-item">2008年</div>
+                                <div class="scroll-item">2009年</div>
+                                <div class="scroll-item">2001年</div>
+                                <div class="scroll-item">2002年</div>
+                                <div class="scroll-item">2003年</div>
+                                <div class="scroll-item">2004年</div>
+                                <div class="scroll-item">2005年</div>
+                                <div class="scroll-item">2006年</div>
+                                <div class="scroll-item">2007年</div>
+                                <div class="scroll-item">2008年</div>
+                                <div class="scroll-item">2009年</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 <script src="../../js/lib/rem.js"></script>
 <script src="../../js/lib/src/user/resume.js"></script>
+<!-- 插件 -->
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
+<script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
+<script>
+    var scroll_select_one = document.getElementById("scroll_select_one");
+    var scroll_select_one_mask = scroll_select_one.getElementsByClassName("scroll_select_one_mask")[0];
+    var main = scroll_select_one.getElementsByClassName("main")[0];
+    var cancel = document.getElementById("cancel");
+    var confirm = document.getElementById("confirm");
+    var _scroll = document.getElementById("scroll");
+    var scroll_item = _scroll.getElementsByClassName("scroll-item");
+    var birthday = document.getElementById("birthday");
+    var h = scroll_item[0].clientHeight;
+    var boxText = null;
 
-    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-    <script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
-    <script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
+    // 显示选择框
+    function showSelect(){
+        main.style.transition = "all 0.5s";
+        scroll_select_one.style.zIndex = 3;
+        scroll_select_one.style.opacity = 1;
+        main.style.bottom = 0;
+        // stop()
+        document.body.style.overflow='hidden';
+    }
+    // 点击取消选择框
+    function cancelSelect(){
+        main.style.transition = "all 0.5s";
+        scroll_select_one.style.zIndex = -6;
+        scroll_select_one.style.opacity = 0;
+        main.style.bottom = -4.76+"rem";
+        document.body.style.overflow='';
+    }
+    
+    // 点击确认选择框
+    function confirmSelect(){
+        main.style.transition = "all 0.5s";
+        scroll_select_one.style.zIndex = -6;
+        scroll_select_one.style.opacity = 0;
+        main.style.bottom = -4.76+"rem";
+        birthday.value = boxText;
+        document.body.style.overflow='';
+    }
+
+    // 设置选中item的样式
+    function scroll_item_scrollStyle(){
+        var scrollH = 0;
+        for(var i = 0;i<scroll_item.length;i++){
+            scroll_item[i].style.color="#ccc";
+            scroll_item[i].style.fontSize= 0.12+'rem';
+            scroll_item[parseInt(_scroll.scrollTop / h)].style.color = "#448DFB";
+            scroll_item[parseInt(_scroll.scrollTop / h)].style.fontSize= 0.36+'rem';
+        }
+    }
+    scroll_item_scrollStyle()
+
+    let scrollTimer;
+    _scroll.addEventListener("scroll", () => {
+        scroll_item_scrollStyle()
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+            // todo something scroll end
+            // console.log("滚动停止")
+            if (_scroll.scrollTop % h > h / 2 && _scroll.scrollTop % h < h) {
+                _scroll.scrollTop = _scroll.scrollTop + (h - _scroll.scrollTop % h);
+            }
+            if (_scroll.scrollTop % h < h / 2 || _scroll.scrollTop % h === h / 2) {
+                _scroll.scrollTop = _scroll.scrollTop - _scroll.scrollTop % h;
+            }
+            setTimeout(function () {
+                boxText = scroll_item[parseInt(_scroll.scrollTop / h)].innerHTML || "";
+                console.log(boxText)
+            }, 500)
+        }, 300);
+    });
+
+</script>
 </html>

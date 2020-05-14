@@ -542,76 +542,76 @@ body{
     //     }
     // }
 
-    .scroll_select_one{
-        // background-color: rgba(0, 0, 0,0.4);
-        width: 100%;
-        height: 100vh;
-        font-size: 0.3rem;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: -6;
-        opacity: 0;
-        .scroll_select_one_mask{
-            background-color: rgba(0, 0, 0,0.4);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .main{
-           width: 100%; 
-           height: 4.76rem;
-           background-color: #ffffff;
-           position: absolute;
-           left: 0;
-           bottom: -4.76rem;
-           display: flex;
-           flex-direction: column;
-           .top_btn{
-               height: 0.8rem;
-               display: flex;
-               align-items: center;
-               justify-content: space-between;
-               padding: 0 0.3rem;
-               box-sizing: border-box;
-               .confirm{
-                   color: #448DFB;
-               }
-           }
-           .scroll-wrap{
-                flex: 1;
-                position: relative;
-                .change{
-                    position: absolute;
-                    left: 0;
-                    top: 0.8rem;
-                    height: 0.8rem;
-                    width: 100%;
-                    background-color: #f7f7f7;
-                    z-index: 1;
-                }
-                .scroll{
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    z-index: 2;
-                    overflow: scroll;
-                    box-sizing: border-box;
-                    padding-top: 0.8rem;
-                    padding-bottom: 2.4rem;
-                    .scroll-item{
-                        text-align: center;
-                        height: 0.8rem;
-                        line-height: 0.8rem;
-                    }
-                }
-           }
-        }
-    }
+    // .scroll_select_one{
+    //     // background-color: rgba(0, 0, 0,0.4);
+    //     width: 100%;
+    //     height: 100vh;
+    //     font-size: 0.3rem;
+    //     position: fixed;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: -6;
+    //     opacity: 0;
+    //     .scroll_select_one_mask{
+    //         background-color: rgba(0, 0, 0,0.4);
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         left: 0;
+    //         top: 0;
+    //     }
+    //     .main{
+    //        width: 100%; 
+    //        height: 4.76rem;
+    //        background-color: #ffffff;
+    //        position: absolute;
+    //        left: 0;
+    //        bottom: -4.76rem;
+    //        display: flex;
+    //        flex-direction: column;
+    //        .top_btn{
+    //            height: 0.8rem;
+    //            display: flex;
+    //            align-items: center;
+    //            justify-content: space-between;
+    //            padding: 0 0.3rem;
+    //            box-sizing: border-box;
+    //            .confirm{
+    //                color: #448DFB;
+    //            }
+    //        }
+    //        .scroll-wrap{
+    //             flex: 1;
+    //             position: relative;
+    //             .change{
+    //                 position: absolute;
+    //                 left: 0;
+    //                 top: 0.8rem;
+    //                 height: 0.8rem;
+    //                 width: 100%;
+    //                 background-color: #f7f7f7;
+    //                 z-index: 1;
+    //             }
+    //             .scroll{
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 position: absolute;
+    //                 left: 0;
+    //                 top: 0;
+    //                 z-index: 2;
+    //                 overflow: scroll;
+    //                 box-sizing: border-box;
+    //                 padding-top: 0.8rem;
+    //                 padding-bottom: 2.4rem;
+    //                 .scroll-item{
+    //                     text-align: center;
+    //                     height: 0.8rem;
+    //                     line-height: 0.8rem;
+    //                 }
+    //             }
+    //        }
+    //     }
+    // }
 
 }
 

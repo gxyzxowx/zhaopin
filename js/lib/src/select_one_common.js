@@ -76,7 +76,7 @@
         // 设置选中item的样式
         function scroll_item_scrollStyle(){
             for(var i = 0;i<scroll_item.length;i++){
-                scroll_item[i].style.transition = "all 0.2s"
+                scroll_item[i].style.transition = "all 0.2s";
                 scroll_item[i].style.color="#ccc";
                 scroll_item[i].style.fontSize= 0.12+'rem';
                 if(_scroll.scrollTop % h > h/2){

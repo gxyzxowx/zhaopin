@@ -7,29 +7,32 @@ var mask = document.getElementById("mask");
 // 显示工作经历教育经历弹框
 function showMask(){
     mask.style.display = "block"; 
-    stop();      
+    // stop();      
+    document.body.style.overflow='hidden';
 }
 function cancelMask(){
     mask.style.display = ""; 
-    move();
+    // move();
+    document.body.style.overflow='';
 }
 function confirmData(){
     mask.style.display = ""; 
-    move();
+    // move();
+    document.body.style.overflow='';
 }
   
 
 // 显示弹框时禁止页面滑动
-var mo=function(e){e.preventDefault();};
-function stop(){
-        document.body.style.overflow='hidden';       
-        document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
-}
-/***取消滑动限制***/
-function move(){
-        document.body.style.overflow='';//出现滚动条
-        document.removeEventListener("touchmove",mo,{passive:false});       
-}
+// var mo=function(e){e.preventDefault();};
+// function stop(){
+//         document.body.style.overflow='hidden';       
+//         document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+// }
+// /***取消滑动限制***/
+// function move(){
+//         document.body.style.overflow='';//出现滚动条
+//         document.removeEventListener("touchmove",mo,{passive:false});       
+// }
 
 
 // 插件三级选择列表************************************

@@ -5,7 +5,7 @@ body{
         outline: none;
         font-size: 0.3rem;
     }
-    .logo-wrap, .license{
+    .logo-wrap{
         border-bottom: 1px solid #eeeeee;
         display: flex;
         align-items: center;
@@ -47,6 +47,140 @@ body{
                 opacity: 0;
                 z-index: 1;
             }
+        }
+    }
+
+    // .license{
+    //     border-bottom: 1px solid #eeeeee;
+    //     display: flex;
+    //     // align-items: center;
+    //     // height: 1.48rem;
+    //     padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+    //     box-sizing: border-box;
+    //     .text{
+    //         width: 1.6rem;
+    //         text-align: center;
+    //         font-size: 0.32rem;
+    //         font-family:"Source Han Sans CN";
+    //         font-weight:400;
+    //         color:rgba(51,51,51,1);
+    //         margin-right: 0.35rem;
+    //         span{
+    //             color: #FE6854;
+    //         }
+    //         .num{
+    //             font-size:0.2rem;
+    //             font-family:"Source Han Sans CN";
+    //             font-weight:400;
+    //             color:rgba(153,153,153,1);
+    //         }
+    //     }
+    //     .img-wrap{
+    //         width: 1rem;
+    //         // height: 1rem;
+    //         // position: relative;
+    //         background-image: url("../../image/add.png");
+    //         background-position: top;
+    //         background-size: 100% auto;
+    //         background-repeat: no-repeat;
+    //         input{
+    //             width: 100%;
+    //             height: 100%;
+    //             position: absolute;
+    //             left: 0;
+    //             top: 0;
+    //             opacity: 0;
+    //             z-index: 1;
+    //         }
+    //         .pic{
+    //             width: 1rem;
+    //             height: 1rem;
+    //             margin-right: 0.1rem;
+    //             margin-bottom: 0.1rem;
+    //             position: relative;
+    //             }
+    //             .pic img {
+    //             width: 100%;
+    //             height: 100%;
+    //             }
+    //             .del{
+    //                 width: 0.2rem;
+    //                 height: 0.2rem;
+    //                 border-radius: 50%;
+    //                 background-image: url("../../image/dele.png");
+    //                 background-position: center;
+    //                 background-size: 100% 100%;
+    //                 background-repeat: no-repeat;
+    //                 position: absolute;
+    //                 right: 0;
+    //                 top: 0.05rem;
+    //             }
+    //     }
+    // }
+
+    .license{
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        padding: 0.3rem;
+        box-sizing: border-box;
+        .text{
+            width: 1.6rem;
+            text-align: center;
+            font-size: 0.32rem;
+            font-family:"Source Han Sans CN";
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            margin-right: 0.35rem;
+            span{
+                color: #FE6854;
+            }
+            .num{
+                font-size:0.2rem;
+                font-family:"Source Han Sans CN";
+                font-weight:400;
+                color:rgba(153,153,153,1);
+            }
+        }
+        .img-wrap{
+            width: 1rem;
+            min-height: 1rem;
+            position: relative;
+            background-image: url("../../image/add.png");
+            background-position: top;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            input{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                z-index: 1;
+            }
+            .pic{
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0.1rem;
+                margin-bottom: 0.1rem;
+                position: relative;
+                }
+                .pic img {
+                width: 100%;
+                height: 100%;
+                }
+                .del{
+                    width: 0.2rem;
+                    height: 0.2rem;
+                    border-radius: 50%;
+                    background-image: url("../../image/dele.png");
+                    background-position: center;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 0;
+                    top: 0.05rem;
+                }
         }
     }
 

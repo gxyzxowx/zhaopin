@@ -51,13 +51,13 @@
                 <div class="num">(多选)</div>
             </div>
             <div class="checkbox-wrap">   
-                <input id="1" type="checkbox">
+                <input id="1" type="checkbox" class="checkbox" value="交通补贴1">
                 <label for="1">交通补贴</label>
-                <input id="2" type="checkbox">
+                <input id="2" type="checkbox" class="checkbox" value="交通补贴2">
                 <label for="2">交通补贴</label>
-                <input id="3" type="checkbox">
+                <input id="3" type="checkbox" class="checkbox" value="交通补贴3">
                 <label for="3">交通补贴</label>
-                <input id="4" type="checkbox">
+                <input id="4" type="checkbox" class="checkbox" value="交通补贴4">
                 <label for="4">交通补贴</label>
             </div>
         </div>
@@ -128,10 +128,25 @@
         </div>
 
         <div class="submit">
-            <input type="submit" value="发布">
+            <input type="submit" id="submit" value="发布">
         </div>
     </form>
     
 </body>
 <script src="../../js/lib/rem.js"></script>
+<script>
+
+          // 获取复选框的值
+          document.getElementById("submit").onclick = function(){
+            var checkboxArr = [];
+            var checkbox = document.getElementsByClassName("checkbox");
+            for(var i = 0;i<checkbox.length;i++){
+                if(checkbox[i].checked){
+                    checkboxArr.push(checkbox[i].value);
+                }
+            }
+            console.log(checkboxArr)
+            return false
+        }
+</script>
 </html>

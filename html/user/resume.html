@@ -9,8 +9,9 @@
     <title>添加简历</title>  
     <link rel="stylesheet" href="../../style/css/resume.css">
     <!-- 插件 -->
-    <!-- <link rel="stylesheet" href="../../style/plugins-css/layout.min.css"> -->
     <link rel="stylesheet" href="../../style/plugins-css/scs.min.css">
+    <style>
+    </style>
 </head>
 <body>
     <form action="">
@@ -108,13 +109,13 @@
                 <div class="num">(多选)</div>
             </div>
             <div class="checkbox-wrap">   
-                <input id="1" type="checkbox">
+                <input id="1" type="checkbox" class="checkbox" value="交通补贴1">
                 <label for="1">交通补贴</label>
-                <input id="2" type="checkbox">
+                <input id="2" type="checkbox" class="checkbox" value="交通补贴2">
                 <label for="2">交通补贴</label>
-                <input id="3" type="checkbox">
+                <input id="3" type="checkbox" class="checkbox" value="交通补贴3">
                 <label for="3">交通补贴</label>
-                <input id="4" type="checkbox">
+                <input id="4" type="checkbox" class="checkbox" value="交通补贴4">
                 <label for="4">交通补贴</label>
             </div>
         </div>
@@ -152,10 +153,10 @@
                     <div class="logo">上传作品 <span>*</span></div>
                     <div class="num">(多张)</div>
             </div>
-            <div class="img-wrap">
-                    <input type="file">
-                    <img src="" alt="">
-            </div>
+            <div class="img-wrap uploadImgBtn" id="uploadImgBtn">
+                <input class="uploadImg" type="file" name="file" multiple id="file">
+                <div id="file-img" style="margin-left: 1rem; width: 4rem; display: flex; flex-wrap: wrap; margin-top: -0.05rem;"></div>
+           </div>
         </div>
 
         <div class="work_experience">
@@ -194,7 +195,7 @@
             </div>
         </div>
 
-        <div class="submit">
+        <div class="submit" id="submit">
             <input type="submit" value="保存">
         </div>
 
@@ -218,15 +219,16 @@
                     <div class="text">
                         <div class="">开始时间<span>*</span></div>
                     </div>
-                    <input type="text" value="" placeholder="请选择开始时间">
-                    <img src="../../image/right.png" alt="">
+                    
+                    <input type="text" value="" placeholder="请选择开始时间" readonly id="start_time" onclick="showSelect('start_time')">
+                    <img src="../../image/right.png" alt="" onclick="showSelect('start_time')">
                 </div>
                 <div class="ipt-common">
                     <div class="text">
                         <div class="">结束时间<span>*</span></div>
                     </div>
-                    <input type="text" value="" placeholder="请选择结束时间">
-                    <img src="../../image/right.png" alt="">
+                    <input type="text" value="" placeholder="请选择结束时间" readonly id="end_time" onclick="showSelect('end_time')">
+                    <img src="../../image/right.png" alt="" onclick="showSelect('end_time')">
                 </div>
                 <div class="btn">
                     <div class="left" id="cancel" onclick="confirmData()">确认</div>
@@ -235,126 +237,72 @@
             </div>
         </div>
 
-        <!--底部选择框三级 -->
-        <!-- <div class="select" id="select">
-            <div class="main">
-                <div class="top">
-                    <div class="cancel" onclick="cancelSelect()">取消</div>
-                    <div class="confirm" onclick="confirmSelect()">确认</div>
-                </div>
-                <div class="scroll-wrap">
-                    <div class="change"></div>
-                    <div class="scroll">
-                        <div class="wrapper">
-                        <div class="left" id="province">
-                            <div class="item p-item">省市1</div>
-                            <div class="item p-item">省市2</div>
-                            <div class="item p-item">省市3</div>
-                            <div class="item p-item">省市4</div>
-                            <div class="item p-item">省市5</div>
-                            <div class="item p-item">省市6</div>
-                            <div class="item p-item">省市7</div>
-                            <div class="item p-item">省市8</div>
-                            <div class="item p-item">省市9</div>
-                            <div class="item p-item">省市10</div>
-                            <div class="item p-item">省市11</div>
-                            <div class="item p-item">省市12</div>
-                            <div class="item p-item">省市13</div>
-                            <div class="item p-item">省市14</div>
-                            <div class="item p-item">省市15</div>
-                            <div class="item p-item">省市16</div>
-                            <div class="item p-item">省市17</div>
-                        </div>
-                        </div>
-                        <div class="wrapper">
-                            <div class="left content">
-                                <div class="item c-item">城市1</div>
-                                <div class="item c-item">城市32</div>
-                                <div class="item c-item">城市</div>
-                                <div class="item c-item">城市4</div>
-                                <div class="item c-item">城市w</div>
-                                <div class="item c-item">城市</div>
-                                <div class="item c-item">城市e</div>
-                                <div class="item c-item">城市</div>
-                                <div class="item c-item">城市e</div>
-                                <div class="item c-item">城市4</div>
-                                <div class="item c-item">城市6</div>
-                                <div class="item c-item">城市</div>
-                                <div class="item c-item">城市7</div>
-                                <div class="item c-item">城市</div>
-                                <div class="item c-item">城市8</div>
-                                <div class="item c-item">城市</div>
-                                <div class="item c-item">城市</div>
-                            </div>
-                        </div>
-                        <div class="wrapper">
-                                <div class="left content">
-                                    <div class="item r-tiem">地区1</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地区3</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地区4</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地5区</div>
-                                    <div class="item r-tiem">地区5</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地区5</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地5区</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地6区</div>
-                                    <div class="item r-tiem">地区</div>
-                                    <div class="item r-tiem">地5区</div>
-                                </div>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div> -->
-
     </form>
-    <!-- 底部选择框一级 -->
-    <div class="scroll_select_one" id="scroll_select_one">
-        <div class="scroll_select_one_mask" id="scroll_select_one_mask"></div>
-        <div class="main">
-            <div class="top_btn">
-                <div class="left cancel" id="scroll_cancel">取消</div>
-                <div class="center">出生年份</div>
-                <div class="right confirm" id="scroll_confirm">确定</div>
-            </div>
-            <div class="scroll-wrap">
-                <div class="change"></div>
-                <div class="scroll" id="scroll">
-                                <div class="scroll-item">2001年</div>
-                                <div class="scroll-item">2002年</div>
-                                <div class="scroll-item">2003年</div>
-                                <div class="scroll-item">2004年</div>
-                                <div class="scroll-item">2005年</div>
-                                <div class="scroll-item">2006年</div>
-                                <div class="scroll-item">2007年</div>
-                                <div class="scroll-item">2008年</div>
-                                <div class="scroll-item">2009年</div>
-                                <div class="scroll-item">2010年</div>
-                                <div class="scroll-item">2011年</div>
-                                <div class="scroll-item">2012年</div>
-                                <div class="scroll-item">2013年</div>
-                                <div class="scroll-item">2014年</div>
-                                <div class="scroll-item">2015年</div>
-                                <div class="scroll-item">2016年</div>
-                                <div class="scroll-item">2017年</div>
-                                <div class="scroll-item">2018年</div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </body>
 
 <script src="../../js/lib/rem.js"></script>
 <script src="../../js/lib/src/user/resume.js"></script>
-<script src="../../js/lib/src/user/select_one_common.js"></script>
+<script src="../../js/lib/src/select_one_common.js"></script>
 <!-- 插件 -->
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
 <script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
+<script>
+
+      // 获取复选框的值
+        document.getElementById("submit").onclick = function(){
+            var checkboxArr = [];
+            var checkbox = document.getElementsByClassName("checkbox");
+            for(var i = 0;i<checkbox.length;i++){
+                if(checkbox[i].checked){
+                    checkboxArr.push(checkbox[i].value);
+                }
+            }
+            console.log(checkboxArr)
+            return false
+        }
+        // 图片上传(多张)
+        $(document).ready(function(){
+        $("#uploadImgBtn").click(function(){
+            var $input = $("#file");
+            $input.on("change" , function(){     
+                var files = this.files;
+                var length = files.length;
+                $.each(files,function(key,value){
+                    var div = document.createElement("div"),
+                        img = document.createElement("img");
+                        div.className = "pic";
+                    var fr = new FileReader();
+                    fr.onload = function(){
+                        img.src=this.result;
+                        var del = document.createElement("div");
+                        del.className = "del";
+                        div.appendChild(img);
+                        div.appendChild(del);
+                        document.getElementById("file-img").appendChild(div)
+                    }
+                    fr.readAsDataURL(value);
+                })
+
+            })
+            $input.removeAttr("id");
+            var newInput = '<input class="uploadImg test" type="file" name="file" multiple id="file">';
+            $(this).append($(newInput));
+
+                var del = document.getElementsByClassName("del");
+                var pic = document.getElementsByClassName("pic");
+                for(var i = 0;i<del.length;i++){
+                    (function(i){
+                        del[i].onclick = function(){
+                            pic[i].remove()
+                        }
+                    })(i)
+                }
+            
+        })
+ 
+
+    })
+</script>
 </html>

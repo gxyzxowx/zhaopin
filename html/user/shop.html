@@ -17,8 +17,8 @@
                 <div class="num">(单张)</div>
             </div>
            <div class="img-wrap">
-                <input type="file">
-                <img src="" alt="">
+                <input type="file" onchange="selectImage(this)">
+                <img src="" alt="" id="image" style="display: block; width: 100%;height: 100%; margin-left: 1rem;">
            </div>
         </div>
         <div class="license">
@@ -26,9 +26,9 @@
                 <div class="logo">执照</div>
                 <div class="num">(营业执照，认证之后不可修改)</div>
             </div>
-            <div class="img-wrap">
-                <input type="file">
-                <img src="" alt="">
+            <div class="img-wrap uploadImgBtn" id="uploadImgBtn">
+                <input class="uploadImg" type="file" name="file" multiple id="file">
+                <div id="file-img" style="margin-left: 1rem; width: 4rem; display: flex; flex-wrap: wrap; margin-top: -0.05rem;"></div>
            </div>
         </div>
         <div class="name">
@@ -103,23 +103,94 @@
                 <div class="num">(多选)</div>
             </div>
             <div class="checkbox-wrap">   
-                <input id="1" type="checkbox">
+                <input id="1" type="checkbox" class="checkbox" value="交通补贴1">
                 <label for="1">交通补贴</label>
-                <input id="2" type="checkbox">
+                <input id="2" type="checkbox" class="checkbox" value="交通补贴2">
                 <label for="2">交通补贴</label>
-                <input id="3" type="checkbox">
+                <input id="3" type="checkbox" class="checkbox" value="交通补贴3">
                 <label for="3">交通补贴</label>
-                <input id="4" type="checkbox">
+                <input id="4" type="checkbox" class="checkbox" value="交通补贴4">
                 <label for="4">交通补贴</label>
             </div>
         </div>
 
         <div class="submit">
-            <input type="submit" value="保存门店/公司资料">
+            <input type="submit" id="submit" value="保存门店/公司资料">
         </div>
 
     </form>
     
 </body>
 <script src="../../js/lib/rem.js"></script>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+    // 获取复选框的值
+    document.getElementById("submit").onclick = function(){
+        var checkboxArr = [];
+        var checkbox = document.getElementsByClassName("checkbox");
+        for(var i = 0;i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                checkboxArr.push(checkbox[i].value);
+            }
+        }
+        console.log(checkboxArr)
+        return false
+    }
+
+    // 单张图片上传预览
+    function selectImage(file){
+        if(!file.files || !file.files[0]){
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function(evt){
+            document.getElementById('image').src = evt.target.result;
+        }
+        reader.readAsDataURL(file.files[0]);
+    }
+
+        // 图片上传(多张)预览
+        $(document).ready(function(){
+        $("#uploadImgBtn").click(function(){
+            var $input = $("#file");
+            $input.on("change" , function(){     
+                var files = this.files;
+                var length = files.length;
+                $.each(files,function(key,value){
+                    var div = document.createElement("div"),
+                        img = document.createElement("img");
+                        div.className = "pic";
+                    var fr = new FileReader();
+                    fr.onload = function(){
+                        img.src=this.result;
+                        var del = document.createElement("div");
+                        del.className = "del";
+                        div.appendChild(img);
+                        div.appendChild(del);
+                        document.getElementById("file-img").appendChild(div)
+                    }
+                    fr.readAsDataURL(value);
+                })
+
+            })
+            $input.removeAttr("id");
+            var newInput = '<input class="uploadImg test" type="file" name="file" multiple id="file">';
+            $(this).append($(newInput));
+
+                var del = document.getElementsByClassName("del");
+                var pic = document.getElementsByClassName("pic");
+                for(var i = 0;i<del.length;i++){
+                    (function(i){
+                        del[i].onclick = function(){
+                            pic[i].remove()
+                        }
+                    })(i)
+                }
+            
+        })
+ 
+
+    })
+
+</script>
 </html>

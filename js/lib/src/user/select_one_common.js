@@ -76,10 +76,10 @@ _scroll.addEventListener("scroll", () => {
         if (_scroll.scrollTop % h < h / 2 || _scroll.scrollTop % h === h / 2) {
             _scroll.scrollTop = _scroll.scrollTop - _scroll.scrollTop % h;
         }
-        setTimeout(function () {
+        // setTimeout(function () {
             boxText = scroll_item[parseInt(_scroll.scrollTop / h)].innerHTML || "";
             console.log(boxText)
-        }, 500)
-    }, 300);
+        // }, 500)
+    }, 100);
 });
 // }("birthday")

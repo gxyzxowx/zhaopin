@@ -45,6 +45,7 @@ window.onload=function(){
           t =60;
         }
       }
+      
       // return false ;
   
   

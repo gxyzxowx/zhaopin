@@ -154,7 +154,7 @@
                     <div class="num">(多张)</div>
             </div>
             <div class="img-wrap uploadImgBtn" id="uploadImgBtn">
-                <input class="uploadImg" type="file" name="file" multiple id="file">
+                <input class="uploadImg" type="file" name="file" onchange="selectImage(this)" multiple id="file">
                 <div id="file-img" style="margin-left: 1rem; width: 4rem; display: flex; flex-wrap: wrap; margin-top: -0.05rem;"></div>
            </div>
         </div>
@@ -194,6 +194,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="submit" id="submit">
             <input type="submit" value="保存">
@@ -262,47 +263,47 @@
             console.log(checkboxArr)
             return false
         }
-        // 图片上传(多张)
-        $(document).ready(function(){
-        $("#uploadImgBtn").click(function(){
-            var $input = $("#file");
-            $input.on("change" , function(){     
-                var files = this.files;
-                var length = files.length;
-                $.each(files,function(key,value){
-                    var div = document.createElement("div"),
-                        img = document.createElement("img");
-                        div.className = "pic";
-                    var fr = new FileReader();
-                    fr.onload = function(){
-                        img.src=this.result;
-                        var del = document.createElement("div");
-                        del.className = "del";
-                        div.appendChild(img);
-                        div.appendChild(del);
-                        document.getElementById("file-img").appendChild(div)
-                    }
-                    fr.readAsDataURL(value);
-                })
 
-            })
-            $input.removeAttr("id");
-            var newInput = '<input class="uploadImg test" type="file" name="file" multiple id="file">';
-            $(this).append($(newInput));
-
-                var del = document.getElementsByClassName("del");
-                var pic = document.getElementsByClassName("pic");
-                for(var i = 0;i<del.length;i++){
-                    (function(i){
-                        del[i].onclick = function(){
-                            pic[i].remove()
-                        }
-                    })(i)
-                }
+        // 多张图片上传
+        var file_img = document.getElementById("file-img");
+        var index = 0;
+        var imgData = [];
+        function selectImage(file){
+            console.log(file.files)
+            if(!file.files || !file.files[0]){
+                return;
+            }
+            for(var i = 0;i<file.files.length;i++){
+                imgData.push(file.files[i]);
+                var reader = new FileReader();
+                reader.onload = function(evt){
+                var div = document.createElement("div");
+                div.className = "pic";
+                var img = document.createElement('img');
+                console.log(evt.target.result)
+                img.src = evt.target.result;
+                var del = document.createElement("div");
+                del.className = "del";
+                del.setAttribute("index",index)
+                div.setAttribute("index",index)
             
-        })
- 
-
-    })
+                del.onclick = function(){
+                var file = document.getElementById("file");
+                var div = document.getElementsByClassName("pic");
+                for(var i = 0;i<div.length;i++){
+                    if(div[i].getAttribute("index") == del.getAttribute("index")){
+                    div[i].remove();
+                    imgData.splice(i,1);
+                    }
+                }       
+                }
+                index++;
+                div.appendChild(img);
+                div.appendChild(del);
+                file_img.appendChild(div);
+            }
+                reader.readAsDataURL(file.files[i]);
+            }
+        }
 </script>
 </html>

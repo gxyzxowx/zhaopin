@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>发布职位</title>
     <link rel="stylesheet" href="../../style/css/release_position.css">
+        <!-- 插件 -->
+        <link rel="stylesheet" href="../../style/plugins-css/scs.min.css">
 </head>
 <body>
     <form action="">
@@ -15,8 +17,10 @@
             <div class="text">
                 <div class="">所在城市<span>*</span></div>
             </div>
-            <input type="text" value="" placeholder="湖北省武汉市江夏区">
+            <input type="text" readonly placeholder="" id="myAddrs" name="addr" data-key="1-36-37" value="北京 北京市 东城区" />
             <img src="../../image/right.png" alt="">
+            <!-- <input type="text" value="" placeholder="湖北省武汉市江夏区">
+            <img src="../../image/right.png" alt=""> -->
         </div>
         <div class="position_name ipt-common2">
             <div class="text">
@@ -134,6 +138,12 @@
     
 </body>
 <script src="../../js/lib/rem.js"></script>
+<!-- <script src="../../js/lib/src/common.js"></script> -->
+<script src="../../js/lib/src/user/resume.js"></script>
+<!-- 插件 -->
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
+<script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
 <script>
 
           // 获取复选框的值

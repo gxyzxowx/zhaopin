@@ -7,10 +7,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>添加简历</title>  
+
     <link rel="stylesheet" href="../../style/css/resume.css">
     <!-- 插件 -->
     <link rel="stylesheet" href="../../style/plugins-css/scs.min.css">
+    <link rel="stylesheet" href="../../js/lib/src/time-plugins/mui.picker.min.css">
     <style>
+        .mui-btn{
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .mui-btn-blue{
+            background-color: #007aff;
+            color: #fff;
+        }
+        .mui-dtpicker-title{
+            display: flex;
+        }
+        .mui-dtpicker-title h5{
+            font-size: 0.3rem;
+
+
+            position: absolute;
+        }
     </style>
 </head>
 <body>
@@ -29,8 +49,7 @@
             <div class="gender-wrap">
                 <div class="nan">                 
                     <input name="Fruit" id="nan" type="radio" class="ipt-gender"/>
-                    <label for="nan">男</label>
-                    
+                    <label for="nan">男</label>                   
                 </div>
                 <div class="nv">                   
                     <input name="Fruit" id="nv" type="radio" class="ipt-gender"/>
@@ -43,8 +62,10 @@
             <div class="text">
                 <div class="">出生年份<span>*</span></div>
             </div>
-            <input type="text" value="" readonly placeholder="请选择出生年份" id="birthday" onclick="showSelect('birthday')">
-            <img src="../../image/right.png" alt="">
+            <div id="tiem_select" style="display: flex; flex: 1; align-items: center;">
+                <input type="text" value="" readonly placeholder="请选择出生年份" id="birthday">
+                <img src="../../image/right.png" alt="">
+            </div>
         </div>
         <div class="education ipt-common">
             <div class="text">
@@ -249,7 +270,40 @@
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
 <script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
-<script>
+
+<script src="../../js/lib/src/time-plugins/mui.min.js"></script>
+<script src="../../js/lib/src/time-plugins/mui.picker.min.js"></script>
+<script type="text/javascript">
+
+        // 精确到分，时间选择
+        mui.init()
+        document.getElementById('tiem_select').addEventListener('click', function(){
+		    // option={"type":"date","beginYear":"1980","endYear":"2030"};
+            var mui_mask = document.createElement("div");
+            mui_mask.style.position = "absolute";
+            mui_mask.style.width = 100 +"%";
+            mui_mask.style.height = 100 +"%";
+            mui_mask.style.left = 0;
+            mui_mask.style.top = 0;
+            mui_mask.style.backgroundColor = "black";
+            mui_mask.style.opacity = 0.3;
+            document.body.appendChild(mui_mask);
+		     var picker = new mui.DtPicker();
+             document.querySelector("button[data-id=btn-cancel]").addEventListener('tap', function(){
+                mui_mask.remove()
+                document.getElementsByClassName('mui-dtpicker')[0].remove();
+		    });
+            document.querySelector("button[data-id=btn-ok]").addEventListener('tap', function(){
+                mui_mask.remove()
+                document.getElementsByClassName('mui-dtpicker')[0].remove();
+		    },false);
+ 
+		     picker.show(function(rs) {
+                
+                mui_mask.remove()
+		        document.getElementById('birthday').value = rs.text;
+		     }); 
+		},false);
 
       // 获取复选框的值
         document.getElementById("submit").onclick = function(){

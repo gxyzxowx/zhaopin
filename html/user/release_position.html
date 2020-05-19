@@ -122,19 +122,19 @@
                 <div class="welfare-text">工作时间:</div>
             </div>
             <div class="checkbox-wrap">   
-                <input id="8" type="checkbox" class="checkbox" value="星期1" checked>
+                <input id="8" type="checkbox" class="checkbox2" value="星期1" checked>
                 <label for="8">星期1</label>
-                <input id="9" type="checkbox" class="checkbox" value="星期2" checked>
+                <input id="9" type="checkbox" class="checkbox2" value="星期2" checked>
                 <label for="9">星期2</label>
-                <input id="10" type="checkbox" class="checkbox" value="星期3">
+                <input id="10" type="checkbox" class="checkbox2" value="星期3">
                 <label for="10">星期3</label>
-                <input id="11" type="checkbox" class="checkbox" value="星期4">
+                <input id="11" type="checkbox" class="checkbox2" value="星期4">
                 <label for="11">星期4</label>
-                <input id="5" type="checkbox" class="checkbox" value="星期5">
+                <input id="5" type="checkbox" class="checkbox2" value="星期5">
                 <label for="5">星期5</label>
-                <input id="6" type="checkbox" class="checkbox" value="星期6">
+                <input id="6" type="checkbox" class="checkbox2" value="星期6">
                 <label for="6">星期6</label>
-                <input id="7" type="checkbox" class="checkbox" value="星期天">
+                <input id="7" type="checkbox" class="checkbox2" value="星期天">
                 <label for="7">星期天</label>
             </div>
         </div>
@@ -196,7 +196,16 @@
                     checkboxArr.push(checkbox[i].value);
                 }
             }
+
+            var checkboxArr2 = [];
+            var checkbox2 = document.getElementsByClassName("checkbox2");
+            for(var i = 0;i<checkbox2.length;i++){
+                if(checkbox2[i].checked){
+                    checkboxArr2.push(checkbox2[i].value);
+                }
+            }
             console.log(checkboxArr)
+            console.log(checkboxArr2)
             return false
         }
 </script>

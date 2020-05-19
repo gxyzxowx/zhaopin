@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>发布职位</title>
     <link rel="stylesheet" href="../../style/css/release_position.css">
+        <!-- 插件 -->
+        <link rel="stylesheet" href="../../style/plugins-css/scs.min.css">
 </head>
 <body>
     <form action="">
@@ -15,8 +17,10 @@
             <div class="text">
                 <div class="">所在城市<span>*</span></div>
             </div>
-            <input type="text" value="" placeholder="湖北省武汉市江夏区">
+            <input type="text" readonly placeholder="" id="myAddrs" name="addr" data-key="1-36-37" value="北京 北京市 东城区" />
             <img src="../../image/right.png" alt="">
+            <!-- <input type="text" value="" placeholder="湖北省武汉市江夏区">
+            <img src="../../image/right.png" alt=""> -->
         </div>
         <div class="position_name ipt-common2">
             <div class="text">
@@ -92,9 +96,50 @@
             <div class="text">
                 <div class="">职位类型<span>*</span></div>
             </div>
-            <input type="text" value="" placeholder="选择列席">
+            <input type="text" value="" placeholder="选择类型">
             <img src="../../image/right.png" alt="">
         </div>
+
+        <!-- 选择兼职显示 -->
+        <div class="class">
+            <div class="text">
+                <div class="">结算方式<span>*</span></div>
+            </div>
+            <div class="gender-wrap">
+                <div class="nan">                 
+                    <input name="Fruit" id="nan" type="radio" class="ipt-gender"/>
+                    <label for="nan">日结</label>
+                    
+                </div>
+                <div class="nv">                   
+                    <input name="Fruit" id="nv" type="radio" class="ipt-gender"/>
+                    <label for="nv">月结</label>
+                </div>
+            </div>
+        </div>
+        <div class="working_hours">
+            <div class="text">
+                <div class="welfare-text">工作时间:</div>
+            </div>
+            <div class="checkbox-wrap">   
+                <input id="8" type="checkbox" class="checkbox" value="星期1" checked>
+                <label for="8">星期1</label>
+                <input id="9" type="checkbox" class="checkbox" value="星期2" checked>
+                <label for="9">星期2</label>
+                <input id="10" type="checkbox" class="checkbox" value="星期3">
+                <label for="10">星期3</label>
+                <input id="11" type="checkbox" class="checkbox" value="星期4">
+                <label for="11">星期4</label>
+                <input id="5" type="checkbox" class="checkbox" value="星期5">
+                <label for="5">星期5</label>
+                <input id="6" type="checkbox" class="checkbox" value="星期6">
+                <label for="6">星期6</label>
+                <input id="7" type="checkbox" class="checkbox" value="星期天">
+                <label for="7">星期天</label>
+            </div>
+        </div>
+
+        
         <div class="description">
             <div class="text">
                 <div class="">职位简介</div>
@@ -134,6 +179,12 @@
     
 </body>
 <script src="../../js/lib/rem.js"></script>
+<!-- <script src="../../js/lib/src/common.js"></script> -->
+<script src="../../js/lib/src/user/resume.js"></script>
+<!-- 插件 -->
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
+<script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
 <script>
 
           // 获取复选框的值

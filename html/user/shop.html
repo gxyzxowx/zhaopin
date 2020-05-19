@@ -156,7 +156,7 @@
     // 多张图片上传
     var file_img = document.getElementById("file-img");
     var index = 0;
-    var imgData = [];
+    var imgData = []; //多图上传
     function selectImage(file){
         console.log(file.files)
         if(!file.files || !file.files[0]){
@@ -164,6 +164,7 @@
         }
         for(var i = 0;i<file.files.length;i++){
             imgData.push(file.files[i]);
+            console.log(imgData)
             var reader = new FileReader();
             reader.onload = function(evt){
             var div = document.createElement("div");
@@ -172,9 +173,8 @@
             img.src = evt.target.result;
             var del = document.createElement("div");
             del.className = "del";
-            del.setAttribute("index",index)
-            div.setAttribute("index",index)
-          
+            del.setAttribute("index",index);
+            div.setAttribute("index",index);   
             del.onclick = function(){
               var file = document.getElementById("file");
               var div = document.getElementsByClassName("pic");

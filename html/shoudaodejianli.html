@@ -50,25 +50,26 @@
     <span class="span-queding"> 通知面试</span>
     <span> 不合适</span>
   </div>
+
   <div class="time">
     <div>
       <h2>选择面试时间</h2>
-      <p>
-        <span>面试时间</span>
-        <select name="yourName" id="yourId">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          </select>
-      </p>
-      <h4>
+          <div id="tiem_select" style="
+          display: flex; justify-content: space-between; padding: 0 0.2rem; 
+          box-sizing: border-box; align-items: center;
+          width: 100%;height: 1rem; ;border-radius: 0;
+          position: absolute;left: 0;top: 1rem;box-shadow:none;
+          border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;"> 
+            <input type="text" value="" placeholder="选择面试时间" id="birthday" style="flex: 1;outline: none;">
+            <img src="../../image/right.png" alt="">
+          </div>
+      <h4 style="margin-top: 0.8rem;">
         <span >确定</span>
         <span class="guan">取消</span>
       </h4>
     </div>
   </div>
+
 </body>
 <script src="../js/lib/rem.js"></script>
 <script src="../js/lib/src/home/shoudaodejianli.js"></script>

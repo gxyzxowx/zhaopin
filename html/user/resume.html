@@ -27,9 +27,6 @@
         }
         .mui-dtpicker-title h5{
             font-size: 0.3rem;
-
-
-            position: absolute;
         }
     </style>
 </head>
@@ -63,7 +60,7 @@
                 <div class="">出生年份<span>*</span></div>
             </div>
             <div id="tiem_select" style="display: flex; flex: 1; align-items: center;">
-                <input type="text" value="" readonly placeholder="请选择出生年份" id="birthday">
+                <input type="text" value="" readonly placeholder="请选择出生年份" id="birthday" onclick="showSelect('birthday')">
                 <img src="../../image/right.png" alt="">
             </div>
         </div>
@@ -71,7 +68,7 @@
             <div class="text">
                 <div class="">最高学历<span>*</span></div>
             </div>
-            <input type="text" value="" placeholder="亲选择最高学历">
+            <input type="text" value="" placeholder="亲选择最高学历" id="birthday2" onclick="showSelectTwo('birthday')">
             <img src="../../image/right.png" alt="">
         </div>
         <div class="work_year ipt-common">
@@ -100,7 +97,7 @@
                 <div class="">期望区域<span>*</span></div>
             </div>
             <!-- <input type="text" value="" placeholder="请选择期望区域"> -->
-            <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="1-36-37" value="北京 北京市 东城区" />
+            <input type="text" readonly placeholder="Click me to pick an address" id="myAddrs" name="addr" data-key="22-62-345" value="重庆 重庆市 万州区" />
             <img src="../../image/right.png" alt="">
         </div>
 
@@ -266,10 +263,12 @@
 <script src="../../js/lib/rem.js"></script>
 <script src="../../js/lib/src/user/resume.js"></script>
 <script src="../../js/lib/src/select_one_common.js"></script>
+<script src="../../js/lib/src/select_one_two_common.js"></script>
 <!-- 插件 -->
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script src="../../js/lib/src/plugins-js/jquery.scs.min.js"></script>
-<script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script>
+<!-- <script src="../../js/lib/src/plugins-js/CNAddrArr.min.js"></script> -->
+<script src="../../js/lib/src/plugins-js/address.js"></script>
 
 <script src="../../js/lib/src/time-plugins/mui.min.js"></script>
 <script src="../../js/lib/src/time-plugins/mui.picker.min.js"></script>
@@ -288,7 +287,7 @@
             mui_mask.style.backgroundColor = "black";
             mui_mask.style.opacity = 0.3;
             document.body.appendChild(mui_mask);
-		     var picker = new mui.DtPicker();
+		     var picker = new mui.DtPicker({ type: 'time' });
              document.querySelector("button[data-id=btn-cancel]").addEventListener('tap', function(){
                 mui_mask.remove()
                 document.getElementsByClassName('mui-dtpicker')[0].remove();

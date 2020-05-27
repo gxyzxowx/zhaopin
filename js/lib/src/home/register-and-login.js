@@ -19,7 +19,7 @@ window.onload=function(){
       huoqu.style.color="#555555";
        iscld=false; //判断为false不执行
     dtimer = setTimeout(function() { //一秒执行一次调用fun函数
-          fun();
+          fun(); //回调fun这个方法实现倒计时
      }, 1000);
     }else{
       console.log(0)
@@ -45,11 +45,8 @@ window.onload=function(){
           t =60;
         }
       }
-      
+
       // return false ;
-  
-  
-  
 
  //登录正则
  function checkPhone(){  
@@ -84,12 +81,10 @@ window.onload=function(){
     odd1 = true;//都正确才执行弹出框
   }
 }
-
-
   register.onclick=function(){  //登录点击
-    checkPhone()
+    checkPhone() //表单验证的方法要在前面调用判断要在后面 不然会出现点击两次才能触发方法
     checkPhone1()
-    if(odd==true && odd1== true){
+    if(odd==true && odd1== true){ //判断短信和手机号都正确才执行
          alert("发送信息中")
     }
   }
